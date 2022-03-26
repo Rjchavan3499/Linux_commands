@@ -1,0 +1,66 @@
+
+Process Management :--
+
+
+*******************************List out highest priority process in the system*********************************
+
+ubuntu@pi-VirtualBox:~$ ps -eo pid,ppid,cmd,%mem,%cpu,nice --sort=-nice | tail
+    258       2 [loop3]                      0.0  0.0 -20
+    339       2 [cryptd]                     0.0  0.0 -20
+   8460       2 [loop5]                      0.0  0.0 -20
+   8547       2 [loop6]                      0.0  0.0 -20
+   8809       2 [loop7]                      0.0  0.0 -20
+   8895       2 [loop8]                      0.0  0.0 -20
+   8985       2 [loop9]                      0.0  0.0 -20
+   9079       2 [loop10]                     0.0  0.0 -20
+   9181       2 [loop11]                     0.0  0.0 -20
+   9365       2 [loop12]                     0.0  0.0 -20
+   
+   
+*****************************Open Terminal With 2 Tabs or Sessions -> a) Run Command "vmstat 1" & b) Swith to another tab and stop running vmstat command and agin resume it **************************
+
+
+  Step 1>    first Right Click 
+  Step 2>    then go to File => Select "New Tab" click enter
+  Step 3>    Once two Tabs get opened........
+  
+  a)
+  Solution -    enter command " vmstat 1 " in both tab one by one and let the command to initiate.
+  
+ubuntu@ip-172-31-91-242:/$ vmstat 1
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 1  0 537352  76580  33108 468040   22   43   304   372  490  358  6  2 92  0  0
+ 0  0 537352  76580  33108 468048    0    0     0     0  451  140  1  0 99  0  0
+ 0  0 537352  76580  33108 468048    0    0     0     0  435  144  1  0 99  0  0
+ 0  0 537352  76580  33108 468048    0    0     0     0  444  114  1  0 99  0  0
+ 0  0 537352  76592  33108 468048    0    0     0     0  552  156  1  1 98  0  0
+ 0  0 537352  76596  33108 468048    0    0     0     0  591  141  0  0 100  0  0
+^Z
+[1]+  Stopped                 vmstat 1
+
+  
+  b)
+  Solution -    enter " Ctrl + z " ...... to Halt or Suspend the running vmstat 1 command in 1st tab 
+                
+ubuntu@ip-172-31-91-242:/$ vmstat 1
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 1  0 537352  76580  33108 468040   22   43   304   372  490  358  6  2 92  0  0
+ 0  0 537352  76580  33108 468048    0    0     0     0  451  140  1  0 99  0  0
+ 0  0 537352  76580  33108 468048    0    0     0     0  435  144  1  0 99  0  0
+ 0  0 537352  76580  33108 468048    0    0     0     0  444  114  1  0 99  0  0
+ 0  0 537352  76592  33108 468048    0    0     0     0  552  156  1  1 98  0  0
+ 0  0 537352  76596  33108 468048    0    0     0     0  591  141  0  0 100  0  0
+^Z
+[1]+  Stopped                 vmstat 1
+
+                again hit vmstat 1 command to run in 2nd tab
+                enter " fg " command to resume the halt stated vmstat 1 command from 1st tab and get it resume again
+                
+                
+
+                
+************************************************************************************************************************************************************************************************************
+              
+                
