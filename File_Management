@@ -1,0 +1,189 @@
+ubuntu@ip-172-31-91-242:~$ du -sh *|sort -nr|head -n5
+8.0K    rs
+4.0K    E:\magic-key.pub
+4.0K    E:\magic-key
+0       key
+ubuntu@ip-172-31-91-242:~$ cd
+ubuntu@ip-172-31-91-242:~$ Desktop
+Desktop: command not found
+ubuntu@ip-172-31-91-242:~$ logout
+Connection to ec2-3-94-57-148.compute-1.amazonaws.com closed.
+e
+Acer@DESKTOP-QSFAQCV MINGW64 /e/magic-key
+$ ssh -i "magic-key-for-ec2.pem" ubuntu@ec2-3-94-57-148.compute-1.amazonaws.com
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.13.0-1019-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Mon Mar 28 02:47:08 UTC 2022
+
+  System load:  0.0                Processes:             106
+  Usage of /:   11.5% of 19.32GB   Users logged in:       0
+  Memory usage: 26%                IPv4 address for eth0: 172.31.91.242
+  Swap usage:   0%
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+38 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Mon Mar 28 02:45:45 2022 from 1.186.224.92
+ubuntu@ip-172-31-91-242:~$ cd
+ubuntu@ip-172-31-91-242:~$ Desktop/
+-bash: Desktop/: No such file or directory
+ubuntu@ip-172-31-91-242:~$ cd /
+ubuntu@ip-172-31-91-242:/$ ls
+Nikhil  boot  etc   lib    lib64   lost+found  mnt  proc  run   snap  sys  usr
+bin     dev   home  lib32  libx32  media       opt  root  sbin  srv   tmp  var
+ubuntu@ip-172-31-91-242:/$ mkdir tom
+mkdir: cannot create directory ‘tom’: Permission denied
+ubuntu@ip-172-31-91-242:/$ sudo mkdir tom
+ubuntu@ip-172-31-91-242:/$ touch jerry
+touch: cannot touch 'jerry': Permission denied
+ubuntu@ip-172-31-91-242:/$ suo touch jerry
+
+Command 'suo' not found, did you mean:
+
+  command 'sup' from deb sup (20100519-1build1)
+  command 'su1' from deb hxtools (20200126-1build1)
+  command 'sur' from deb subtle (0.11.3224-xi-2.2build3)
+  command 'su' from deb util-linux (2.34-0.1ubuntu9.3)
+  command 'sum' from deb coreutils (8.30-3ubuntu2)
+  command 'sudo' from deb sudo (1.8.31-1ubuntu1.2)
+  command 'sudo' from deb sudo-ldap (1.8.31-1ubuntu1.2)
+  command 'sumo' from deb sumo (1.4.0+dfsg1-1)
+
+Try: sudo apt install <deb name>
+
+ubuntu@ip-172-31-91-242:/$ sudo touch jerry
+ubuntu@ip-172-31-91-242:/$ chmod 664 jerry
+chmod: changing permissions of 'jerry': Operation not permitted
+ubuntu@ip-172-31-91-242:/$ sudo chmod 664 jerry
+ubuntu@ip-172-31-91-242:/$ ls -l
+total 72
+drwxrwxrwx   2 root root  4096 Mar 26 04:39 Nikhil
+lrwxrwxrwx   1 root root     7 Nov 29 23:30 bin -> usr/bin
+drwxr-xr-x   3 root root  4096 Mar 23 06:45 boot
+drwxr-xr-x  17 root root  3220 Mar 24 10:27 dev
+drwxr-xr-x  94 root root  4096 Mar 27 17:23 etc
+drwxr-xr-x   5 root root  4096 Mar 27 17:21 home
+-rw-rw-r--   1 root root     0 Mar 28 02:48 jerry
+lrwxrwxrwx   1 root root     7 Nov 29 23:30 lib -> usr/lib
+lrwxrwxrwx   1 root root     9 Nov 29 23:30 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root     9 Nov 29 23:30 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root    10 Nov 29 23:30 libx32 -> usr/libx32
+drwx------   2 root root 16384 Nov 29 23:34 lost+found
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 media
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 mnt
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 opt
+dr-xr-xr-x 167 root root     0 Mar 24 10:26 proc
+drwx------   5 root root  4096 Mar 27 17:03 root
+drwxr-xr-x  25 root root   840 Mar 28 02:47 run
+lrwxrwxrwx   1 root root     8 Nov 29 23:30 sbin -> usr/sbin
+drwxr-xr-x   8 root root  4096 Nov 29 23:36 snap
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 srv
+dr-xr-xr-x  13 root root     0 Mar 24 10:26 sys
+drwxrwxrwt  12 root root  4096 Mar 28 02:03 tmp
+drwxr-xr-x   2 root root  4096 Mar 28 02:48 tom
+drwxr-xr-x  15 root root  4096 Nov 29 23:32 usr
+drwxr-xr-x  13 root root  4096 Nov 29 23:33 var
+ubuntu@ip-172-31-91-242:/$ sudo useradd -g adm shubham
+ubuntu@ip-172-31-91-242:/$ id shubham
+uid=1009(shubham) gid=4(adm) groups=4(adm)
+ubuntu@ip-172-31-91-242:/$ sudo -i
+root@ip-172-31-91-242:~# 11
+11: command not found
+root@ip-172-31-91-242:~# mkdir /data
+root@ip-172-31-91-242:~# 11
+11: command not found
+root@ip-172-31-91-242:~# cd /
+root@ip-172-31-91-242:/# ls
+Nikhil  data  home   lib32   lost+found  opt   run   srv  tom
+bin     dev   jerry  lib64   media       proc  sbin  sys  usr
+boot    etc   lib    libx32  mnt         root  snap  tmp  var
+root@ip-172-31-91-242:/# cd /data
+root@ip-172-31-91-242:/data# cd ..
+root@ip-172-31-91-242:/# ;s -l
+-bash: syntax error near unexpected token `;'
+root@ip-172-31-91-242:/# ls -l
+total 76
+drwxrwxrwx   2 root root  4096 Mar 26 04:39 Nikhil
+lrwxrwxrwx   1 root root     7 Nov 29 23:30 bin -> usr/bin
+drwxr-xr-x   3 root root  4096 Mar 23 06:45 boot
+drwxr-xr-x   2 root root  4096 Mar 28 02:51 data
+drwxr-xr-x  17 root root  3220 Mar 24 10:27 dev
+drwxr-xr-x  94 root root  4096 Mar 28 02:50 etc
+drwxr-xr-x   5 root root  4096 Mar 27 17:21 home
+-rw-rw-r--   1 root root     0 Mar 28 02:48 jerry
+lrwxrwxrwx   1 root root     7 Nov 29 23:30 lib -> usr/lib
+lrwxrwxrwx   1 root root     9 Nov 29 23:30 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root     9 Nov 29 23:30 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root    10 Nov 29 23:30 libx32 -> usr/libx32
+drwx------   2 root root 16384 Nov 29 23:34 lost+found
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 media
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 mnt
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 opt
+dr-xr-xr-x 167 root root     0 Mar 24 10:26 proc
+drwx------   5 root root  4096 Mar 27 17:03 root
+drwxr-xr-x  25 root root   840 Mar 28 02:47 run
+lrwxrwxrwx   1 root root     8 Nov 29 23:30 sbin -> usr/sbin
+drwxr-xr-x   8 root root  4096 Nov 29 23:36 snap
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 srv
+dr-xr-xr-x  13 root root     0 Mar 24 10:26 sys
+drwxrwxrwt  12 root root  4096 Mar 28 02:03 tmp
+drwxr-xr-x   2 root root  4096 Mar 28 02:48 tom
+drwxr-xr-x  15 root root  4096 Nov 29 23:32 usr
+drwxr-xr-x  13 root root  4096 Nov 29 23:33 var
+root@ip-172-31-91-242:/# chown root:adm data/
+root@ip-172-31-91-242:/# ls -l
+total 76
+drwxrwxrwx   2 root root  4096 Mar 26 04:39 Nikhil
+lrwxrwxrwx   1 root root     7 Nov 29 23:30 bin -> usr/bin
+drwxr-xr-x   3 root root  4096 Mar 23 06:45 boot
+drwxr-xr-x   2 root adm   4096 Mar 28 02:51 data
+drwxr-xr-x  17 root root  3220 Mar 24 10:27 dev
+drwxr-xr-x  94 root root  4096 Mar 28 02:50 etc
+drwxr-xr-x   5 root root  4096 Mar 27 17:21 home
+-rw-rw-r--   1 root root     0 Mar 28 02:48 jerry
+lrwxrwxrwx   1 root root     7 Nov 29 23:30 lib -> usr/lib
+lrwxrwxrwx   1 root root     9 Nov 29 23:30 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root     9 Nov 29 23:30 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root    10 Nov 29 23:30 libx32 -> usr/libx32
+drwx------   2 root root 16384 Nov 29 23:34 lost+found
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 media
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 mnt
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 opt
+dr-xr-xr-x 167 root root     0 Mar 24 10:26 proc
+drwx------   5 root root  4096 Mar 27 17:03 root
+drwxr-xr-x  25 root root   840 Mar 28 02:47 run
+lrwxrwxrwx   1 root root     8 Nov 29 23:30 sbin -> usr/sbin
+drwxr-xr-x   8 root root  4096 Nov 29 23:36 snap
+drwxr-xr-x   2 root root  4096 Nov 29 23:30 srv
+dr-xr-xr-x  13 root root     0 Mar 24 10:26 sys
+drwxrwxrwt  12 root root  4096 Mar 28 02:03 tmp
+drwxr-xr-x   2 root root  4096 Mar 28 02:48 tom
+drwxr-xr-x  15 root root  4096 Nov 29 23:32 usr
+drwxr-xr-x  13 root root  4096 Nov 29 23:33 var
+root@ip-172-31-91-242:/# chmod 664 data/
+root@ip-172-31-91-242:/# cd data/
+root@ip-172-31-91-242:/data# touch test.txt
+root@ip-172-31-91-242:/data# 11
+11: command not found
+root@ip-172-31-91-242:/data# ll
+total 8
+drw-rw-r--  2 root adm  4096 Mar 28 02:55 ./
+drwxr-xr-x 22 root root 4096 Mar 28 02:51 ../
+-rw-r--r--  1 root root    0 Mar 28 02:55 test.txt
+root@ip-172-31-91-242:/data# chmod -R 664 test.txt
+root@ip-172-31-91-242:/data# ll
+total 8
+drw-rw-r--  2 root adm  4096 Mar 28 02:55 ./
+drwxr-xr-x 22 root root 4096 Mar 28 02:51 ../
+-rw-rw-r--  1 root root    0 Mar 28 02:55 test.txt
+root@ip-172-31-91-242:/data#
