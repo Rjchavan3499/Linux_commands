@@ -1,30 +1,4 @@
-************** Setup additional swap space in the system to solve low memory issue.  The swap which you added should be available post reboot.*******************************
 
-
-ubuntu@ip-172-31-91-242:~$ ~$ mkdir dir
-ubuntu@ip-172-31-91-242:~$ %:~$ cd dir/
-ubuntu@ip-172-31-91-242:~$ :~/dir$ touch myswapfile
-ubuntu@ip-172-31-91-242:~$ :~/dir$ dd if=/dev/zero of=/dir/myswapfile bs=1024 count=1024
-1024+0 records in
-1024+0 records out
-1048576 bytes (1.0 MB, 1.0 MiB) copied, 0.00550766 s, 190 MB/s
-
-ubuntu@ip-172-31-91-242:~$ ~$ ls -l /dir/myswapfile
--rw-r--r-- 1 root root 1048576 Feb 25 17:56 /dir/myswapfile
-ubuntu@ip-172-31-91-242:~$ :~$ mkswap /dir/myswapfile
-mkswap: /dir/myswapfile: insecure permissions 0644, 0600 suggested.
-Setting up swapspace version 1, size = 1020 KiB (1044480 bytes)
-no label, UUID=0ddb6e4f-23b2-404b-937d-4ab5f972dcda
-
-ubuntu@ip-172-31-91-242:~$ :~$ swapon -a /dir/myswapfile
-swapon: /dir/myswapfile: insecure permissions 0644, 0600 suggested.
-ubuntu@ip-172-31-91-242:~$ :~$ swapon -s
-Filename				Type		Size	Used	Priority
-/swapfile                              	file    	776376	0	-2
-/dir/myswapfile                        	file    	1020	0	-3
-
-
-*******************************************************************************************************************
 
 *************** 2) Find out the number of process is in run queue and blocking queue.*******************************
 
